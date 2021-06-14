@@ -1,7 +1,10 @@
 from typing import Optional, Dict, List
 from flask import Flask, Request, Response, render_template
 
-from services.errors import get_request_errors
+import sys
+sys.path.append("services")
+
+from services.error_service import get_request_errors
 from services.prediction_service import get_prediction
 
 app = Flask(__name__)
